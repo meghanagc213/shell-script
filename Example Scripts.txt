@@ -1,0 +1,12 @@
+#!/bin/bash
+systemctl status "$1" | grep -q "running"
+if [[ $? -eq 0 ]] then
+echo "service is in running state"
+else
+echo "service is in exit state"
+fi
+.............................................................
+#!/bin/bash
+awk '$3>40{print $1}' employeetable
+
+.............................................................
